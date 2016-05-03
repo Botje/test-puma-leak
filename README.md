@@ -15,7 +15,8 @@ Result: Sometimes, both counts are stuck at 1, which means that a Puma::Client a
 
 Tested on OSX 10.10.5 with Ruby 2.2.5 and Rails 4.2.6.
 
-Sample output: (it took two runs of `siege` here, sometimes it one or three)
+Sample output: (it took two runs of `siege` here, sometimes it takes fewer or more)
+
 ```
 Mor% bundle exec puma -t 0:16 -e production config.ru
 Puma starting in single mode...
