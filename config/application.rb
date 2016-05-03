@@ -30,3 +30,14 @@ module TestLeak
     # config.i18n.default_locale = :de
   end
 end
+
+Thread.new {
+  while true
+    GC.start
+    count = ObjectSpace.each_object(Puma::Client).count.to_s
+    STDERR.puts "Puma clients: #{count}"
+    count = ObjectSpace.each_object(ActionController::Base).count.to_s
+    STDERR.puts "Controllers:  #{count}"
+    sleep 5
+  end
+}
