@@ -1,4 +1,4 @@
-= Demo application to show Puma leaks
+# Demo application to show Puma leaks
 
 This is a skeleton Rails 4.2.6 application that demonstrates an occasional leak in the Puma application server.
 
